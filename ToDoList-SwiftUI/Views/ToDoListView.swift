@@ -34,7 +34,7 @@ struct ToDoListView: View {
                  }
                  .listStyle(PlainListStyle())
             }
-            .navigationTitle("ToDo List")
+            .navigationTitle("To Do List")
             .toolbar {
                 Button {
                     viewModel.showingNewItemView = true
