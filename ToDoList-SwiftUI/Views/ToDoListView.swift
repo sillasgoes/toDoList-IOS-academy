@@ -10,7 +10,7 @@ import SwiftUI
 struct ToDoListView: View {
     
     @StateObject var viewModel : ToDoListViewViewModel
-    @FirestoreQuery var items: [TodoListItem]
+    @FirestoreQuery var items: [ToDoListItem]
     
 
     init(userId: String) {

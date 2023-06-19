@@ -10,7 +10,7 @@ import SwiftUI
 struct ToDoListItemView: View {
     
     @StateObject var viewmodel = ProfileViewViewModel()
-    let item: TodoListItem
+    let item: ToDoListItem
     
     var body: some View {
         HStack {
@@ -27,6 +27,7 @@ struct ToDoListItemView: View {
                 viewmodel.toogleIsDone(item: item)
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
+                    .foregroundColor(Color.blue)
             }
 
         }

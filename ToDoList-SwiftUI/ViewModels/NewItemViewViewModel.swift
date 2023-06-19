@@ -29,7 +29,7 @@ class NewItemViewViewModel: ObservableObject {
         
         // Create model
         let newId = UUID().uuidString
-        let newItem = TodoListItem(id: newId,
+        let newItem = ToDoListItem(id: newId,
                                    title: title,
                                    dueDate: dueDate.timeIntervalSince1970,
                                    createdDate: Date().timeIntervalSince1970,

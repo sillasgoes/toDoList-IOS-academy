@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TodoListItem: Codable, Identifiable {
+struct ToDoListItem: Codable, Identifiable {
     
     let id: String
     let title: String
