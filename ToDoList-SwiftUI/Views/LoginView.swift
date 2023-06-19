@@ -14,13 +14,10 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // Header
                 HeaderView(title: "To Do List",
                            subtitle: "Get Things Done",
                            angle: 15,
                            background: .pink)
-                
-                // Login Form
                 Form {
                     TextField("Email Address", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
@@ -34,14 +31,10 @@ struct LoginView: View {
                     TLButton(title: "Log In",
                              background: .blue
                     ) {
-                        
+                        viewModel.login()
                     }
-                    
                     .padding()
                 }
-                
-                // Create Acount
-                
                 VStack{
                     Text("New around here ?")
                     NavigationLink("Create An Account",

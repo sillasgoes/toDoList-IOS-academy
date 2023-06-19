@@ -21,13 +21,11 @@ class NewItemViewViewModel: ObservableObject {
         guard canSave else {
             return
         }
-        
-        // Get Curent user id
+ 
         guard let uId = Auth.auth().currentUser?.uid else {
             return
         }
         
-        // Create model
         let newId = UUID().uuidString
         let newItem = ToDoListItem(id: newId,
                                    title: title,

@@ -21,7 +21,7 @@ struct RegisterView: View {
             Form {
                 TextField("Name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
-                    
+                
                 TextField("Email Address", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()

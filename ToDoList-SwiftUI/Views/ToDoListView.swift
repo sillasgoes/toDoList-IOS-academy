@@ -12,7 +12,6 @@ struct ToDoListView: View {
     @StateObject var viewModel : ToDoListViewViewModel
     @FirestoreQuery var items: [ToDoListItem]
     
-
     init(userId: String) {
         self._items = FirestoreQuery(
             collectionPath: "users/\(userId)/todos"
@@ -54,3 +53,5 @@ struct ToDoListView_Previews: PreviewProvider {
         ToDoListView(userId: "G7bSgsf2FNUf3FTDBxq47vCpysr2")
     }
 }
+
+

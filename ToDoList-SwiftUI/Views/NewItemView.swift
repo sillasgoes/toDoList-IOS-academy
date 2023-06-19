@@ -12,7 +12,6 @@ struct NewItemView: View {
     @StateObject var viewModel = NewItemViewViewModel()
     @Binding var newItemPresented: Bool
     
-    
     var body: some View {
         VStack{
             Text("New Item")

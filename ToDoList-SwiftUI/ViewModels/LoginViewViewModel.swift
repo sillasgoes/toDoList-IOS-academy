@@ -8,15 +8,13 @@
 import FirebaseAuth
 import Foundation
 
-
 class LoginViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
     @Published var errorMessage = ""
     
-    init() {
-    }
+    init() {}
     
     func login() {
         guard validate() else {
