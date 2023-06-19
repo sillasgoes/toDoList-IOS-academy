@@ -1,5 +1,5 @@
 //
-//  HeaderView.swift
+//  MainView.swift
 //  ToDoList-SwiftUI
 //
 //  Created by Sillas Santos on 13/06/23.
@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct HeaderView: View {
+    
+    let title: String
+    let subtitle: String
+    let angle: Double
+    let background: Color
+    
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color.pink)
-                .rotationEffect(Angle(degrees: 15))
+            RoundedRectangle(cornerRadius: 0)
+                .foregroundColor(background)
+                .rotationEffect(Angle(degrees: angle))
             VStack{
-                Text("To Do List")
+                Text(title)
                     .font(.system(size: 50))
                     .foregroundColor(Color.white)
                     .bold()
                 
-                Text("Get Things done")
+                Text(subtitle)
                     .font(.system(size: 30))
                     .foregroundColor(Color.white)
                     .bold()
@@ -34,6 +40,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView()
+        HeaderView(title: "To Do List", subtitle: "Get Things Done", angle: 15, background: Color.pink)
     }
 }
